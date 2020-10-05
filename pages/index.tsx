@@ -4,8 +4,17 @@ import utilStyles from '../styles/utils.module.css'
 import Link from 'next/link'
 import {getSortedPostsData} from '../lib/posts'
 import Date from '../components/date'
+import { GetStaticProps } from 'next'
 
-export default function Home({allPostData}) {
+export default function Home({
+  allPostData
+}: {
+  allPostData: {
+    date: string
+    title: string
+    id: string
+  }[]
+}) {
   return (
     <Layout home>
       <Head>
@@ -44,7 +53,7 @@ export default function Home({allPostData}) {
               {/*{id}*/}
               <br />
               <small className={utilStyles.lightText}>
-                <Date datestring={date} />
+                <Date dateString={date} />
               </small>
             </li>
           ))}
