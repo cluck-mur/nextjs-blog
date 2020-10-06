@@ -5,7 +5,8 @@ import Link from 'next/link'
 
 //const name = 'Nanashino Gonbee'
 const name = 'Oak Yukinari'
-export const siteTitle = 'Next.js Sample Website'
+//export const siteTitle = 'Next.js Sample Website'
+export const siteTitle = 'Next.js Sample Website Builded By Cluck-Mur'
 
 export default function Layout({
   children,
